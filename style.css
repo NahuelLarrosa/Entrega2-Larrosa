@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #000000, #BC1E22);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: monospace;
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
+}
+
+a {
+  color: whitesmoke;
+}
+
+a:hover {
+  color: #394A59;
+}
+
+header {
+  grid-area: header;
+  background-color: #64696C;
+  border: solid 1px red;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0 0 0.625em #bc1e22, 0 0 1.5625em #bc1e22, -0.0625em 0 0.125em rgb(0 0 0 / 50%)
+}
+
+#plantilla {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    " header header "
+    " texto fotoindex "
+    " footer footer "
+  ;
+  grid-template-rows: 70px auto 5px;
+  grid-template-columns: repeat (2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 25px;
+}
+
+footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  color: black;
+  background-color: #64696C;
+  border: solid 1px #FFFFFF;
+  border-radius: 5px;
+  font-size: 11px;
+  align-self: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul li {
+  display: inline;
+  padding: 10px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+}
+
+ul li:hover {
+  background-color: crimson;
+}
+
+.nav>li {
+  float: left;
+}
+
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 5px
+}
+
+.nav li a:hover {
+  color: #394A59;
+  background-color: crimson;
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+}
+
+.nav li:hover>ul {
+  display: block;
+  color: #fff;
+}
+
+.nav li ul li {
+  position: relative;
+}
+
+.shake {
+  font-size: 10rem;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.shake:hover {
+  animation: agitar 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes agitar {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  90% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+#texto {
+  grid-area: texto;
+  color: whitesmoke;
+  border: solid 1px #FFFFFF;
+  border-radius: 15px;
+  padding-left: 5px;
+
+}
+
+.imagen {
+  width: 95%;
+  height: 90%;
+  border-radius: 15px;
+}
+
+.carousel-inner{
+  width: 100%;
+  height: auto;
+}
+
+#fotoindex {
+  grid-area: fotoindex;
+  display: flex;
+  background-size:90% 60%;
+  padding-right: 5px;
+}
+
+ol {
+  list-style: none
+}
+
+form legend {
+  font-weight: bold;
+}
+
+form {
+  position: left;
+  border: none;
+}
+
+form input[type=text] {
+  background-color: #394A59;
+}
+
+form input[type=email] {
+  background-color: #394A59;
+}
+
+form input[type=number] {
+  background-color: #394A59;
+}
+
+@media screen and (max-width: 680px) {
+  body {
+    background: linear-gradient(to bottom, #000000, #BC1E22);
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  #plantilla {
+    grid-template-areas:
+      " header header "
+      " texto texto "
+      " fotoindex fotoindex "
+      " footer footer "
+    ;
+    grid-template-rows: 85px 220px auto 5px;
+    grid-template-columns: repeat (2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
+  }
+
+  img {
+    width: 95%;
+    height: 85%;
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    background: linear-gradient(to bottom, #000000, #BC1E22);
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+
+  #plantilla {
+    grid-template-areas:
+      " header header"
+      " texto fotoindex"
+      " footer footer";
+    grid-template-rows: 65px auto 5px;
+    grid-template-columns: repeat (2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
+  }
+}
+
+#confon{
+  background-image: url("imagenes/death-star.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
